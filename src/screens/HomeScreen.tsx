@@ -52,6 +52,7 @@ const HomeScreen = () => {
   const [categories, setCategories] = useState(
     getCategoriesFromData(CoffeeList),
   );
+
   const [searchText, setSearchText] = useState('');
   const [catgeoryIndex, setCatgeoryIndex] = useState({
     index: 0,
@@ -90,6 +91,9 @@ const HomeScreen = () => {
     setSortedCoffee([...CoffeeList]);
     setSearchText('');
   };
+
+  console.log(categories, 'categories');
+  console.log(CoffeeList, 'CoffeeList');
   return (
     <View style={styles.ScreenContainer}>
       <StatusBar backgroundColor={COLORS.primaryBlackHex} />
